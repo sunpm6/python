@@ -7,7 +7,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo "Building...!!"
-                sh '/var/jenkins_home/workspace/api-python/flask/build.sh'
+                sh './build.sh'
             }
         }
         stage('Test'){
@@ -18,7 +18,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo "Deploying...!!"
-                sh '/var/jenkins_home/workspace/api-python/flask/deploy.sh'
+                sh './deploy.sh'
             }
         }
     }
