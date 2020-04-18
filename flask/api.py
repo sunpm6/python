@@ -9,7 +9,7 @@ api = Api(app)
 class HelloWorld(Resource):
 
     def get(self):
-        return {'name':'sunil','place':'coorg','Country':'India'}
+        return {'name':'sunil','place':'coorg','country':'India'}
 
 api.add_resource(HelloWorld,'/')
 
