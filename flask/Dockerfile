@@ -12,7 +12,7 @@ FROM python:3.7.7-alpine3.11
 
 WORKDIR /usr/src/app
 
-COPY --from=builder
+COPY --from=builder /usr/src/app .
 
 EXPOSE 8082
 
