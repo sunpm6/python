@@ -7,7 +7,6 @@ pipeline {
         stage('Build') {
             steps {
                 echo "Building...!!"
-                chmod 755 flask
                 sh './flask/build.sh'
             }
         }
@@ -18,8 +17,7 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-                echo "Deploying...!!"
-                chmod 755 flask
+                echo "Deploying...!!!"
                 sh './flask/deploy.sh'
             }
         }
