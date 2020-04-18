@@ -10,7 +10,9 @@ COPY . .
 
 FROM python:alpine
 
-COPY --from=builder /usr/src/app
+WORKDIR /usr/src/app
+
+COPY --from=builder /usr/src/app .
 
 EXPOSE 8082
 
