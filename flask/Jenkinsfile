@@ -7,7 +7,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo "Building...!!"
-                'sh ./flask/build.sh'
+                sh './flask/build.sh'
             }
         }
         stage('Test'){
@@ -18,7 +18,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo "Deploying...!!"
-                'sh ./flask/deploy.sh'
+                sh './flask/deploy.sh'
             }
         }
     }
