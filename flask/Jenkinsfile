@@ -9,6 +9,8 @@ pipeline {
                 echo "Building...!!"
                 sh 'ls -l'
                 sh './flask/build.sh'
+                slackSend channel: '#jenkins-ci',
+                          message: 'Build Successfull'
             }
         }
         stage('Test'){
